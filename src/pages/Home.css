@@ -1,0 +1,201 @@
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 -32px;
+}
+
+.hero-rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(179, 157, 219, 0.1);
+  animation: spin linear infinite;
+}
+.ring-1 { width: 200px; height: 200px; animation-duration: 20s; }
+.ring-2 { width: 300px; height: 300px; animation-duration: 35s; border-color: rgba(179,157,219,0.06); }
+.ring-3 { width: 420px; height: 420px; animation-duration: 55s; border-color: rgba(179,157,219,0.04); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.orb-center {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  opacity: 0.5;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%; left: 50%;
+}
+.orb-1 {
+  width: 5px; height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  background: var(--purple-light);
+  animation: orbit1 8s linear infinite;
+}
+.orb-2 {
+  width: 4px; height: 4px;
+  margin: -2px 0 0 -2px;
+  background: var(--gold);
+  animation: orbit2 13s linear infinite;
+}
+.orb-3 {
+  width: 5px; height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  background: #E1BEE7;
+  animation: orbit3 6s linear infinite;
+}
+
+@keyframes orbit1 {
+  from { transform: rotate(0deg)   translateX(100px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+@keyframes orbit2 {
+  from { transform: rotate(120deg)  translateX(70px) rotate(-120deg); }
+  to   { transform: rotate(480deg)  translateX(70px) rotate(-480deg); }
+}
+@keyframes orbit3 {
+  from { transform: rotate(240deg)  translateX(130px) rotate(-240deg); }
+  to   { transform: rotate(600deg)  translateX(130px) rotate(-600deg); }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--purple-light);
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-sub {
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.hero-hint {
+  font-size: 12px;
+  color: var(--text-hint);
+  margin-top: 6px;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+/* ── Arirang Banner ── */
+.arirang-banner {
+  margin: 8px 0 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(179, 157, 219, 0.25);
+  background: rgba(123, 94, 167, 0.07);
+  padding: 32px 36px;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.banner-label {
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.banner-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--purple-light);
+  margin-bottom: 16px;
+}
+
+.banner-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 14px;
+  letter-spacing: 0.03em;
+}
+
+.banner-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: 1px solid rgba(179, 157, 219, 0.3);
+  background: rgba(123, 94, 167, 0.15);
+  color: var(--purple-light);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.banner-btn:hover {
+  background: rgba(123, 94, 167, 0.3);
+  border-color: var(--purple-light);
+}
+
+/* ── Chapter divider ── */
+.era-section { margin-bottom: 48px; }
+
+.chapter-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.chapter-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(201, 168, 76, 0.2);
+}
+
+.chapter-label {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* ── Era grid ── */
+.era-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}

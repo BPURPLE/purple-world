@@ -1,0 +1,414 @@
+.era-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 32px 80px;
+}
+
+.era-back {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--text-hint);
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-bottom: 32px;
+  display: block;
+}
+.era-back:hover { color: var(--purple-light); }
+
+/* ── Header ── */
+.era-header { margin-bottom: 40px; animation: fadeUp 0.6s ease both; }
+
+.era-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.era-chapter {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.era-years-badge {
+  font-size: 11px;
+  padding: 3px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.era-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--era-primary, var(--purple-light));
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.era-korean-title {
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 36px;
+}
+
+.era-mood-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.era-mood-pill {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--era-accent, var(--purple-light));
+  opacity: 0.8;
+}
+
+/* ── Story ── */
+.era-story {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 32px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.era-section-title {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-hint);
+  margin-bottom: 14px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.era-theme {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.era-aesthetic {
+  border-left: 2px solid var(--era-primary, var(--purple));
+  padding-left: 16px;
+}
+
+.era-aesthetic-label {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-hint);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.era-aesthetic p {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Start card ── */
+.era-start-card {
+  background: rgba(123, 94, 167, 0.07);
+  border: 1px solid rgba(179, 157, 219, 0.15);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  height: fit-content;
+}
+
+.era-start-label {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.era-start-song {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--era-primary, var(--purple-light));
+  margin-bottom: 10px;
+}
+
+.era-start-reason {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.era-start-btn {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 40px;
+  border: 1px solid rgba(179, 157, 219, 0.25);
+  background: rgba(123, 94, 167, 0.15);
+  color: var(--purple-light);
+  font-size: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.era-start-btn:hover {
+  background: rgba(123, 94, 167, 0.3);
+}
+
+/* ── Albums ── */
+.era-albums { margin-bottom: 40px; animation: fadeUp 0.6s 0.2s ease both; }
+
+.era-album-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.era-album-tag {
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+/* ── Tracklist (Arirang) ── */
+.era-tracklist { margin-bottom: 40px; animation: fadeUp 0.6s 0.2s ease both; }
+
+.tracklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+.track-item:hover {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.track-title {
+  background: rgba(123, 94, 167, 0.1);
+  border-color: rgba(179, 157, 219, 0.2) !important;
+}
+
+.track-num {
+  font-size: 11px;
+  color: var(--text-hint);
+  font-variant-numeric: tabular-nums;
+  min-width: 20px;
+}
+
+.track-name {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.track-badge {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(123, 94, 167, 0.2);
+  color: var(--purple-light);
+  border: 1px solid rgba(179, 157, 219, 0.2);
+}
+
+.era-producers {
+  font-size: 11px;
+  color: var(--text-hint);
+  letter-spacing: 0.05em;
+  margin-top: 12px;
+}
+
+/* ── Military timeline ── */
+.era-timeline { margin-bottom: 40px; }
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.timeline-card {
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeline-member { font-size: 14px; font-weight: 500; }
+.timeline-dates { font-size: 11px; color: var(--text-hint); }
+.timeline-status {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.timeline-returned .timeline-status { color: #80CBC4; }
+.timeline-serving  .timeline-status { color: var(--gold); }
+
+/* ── Solo grid ── */
+.era-solos { margin-bottom: 40px; }
+
+.solo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.solo-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.solo-card:hover { transform: translateY(-2px); }
+
+.solo-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.solo-info { display: flex; flex-direction: column; gap: 2px; }
+.solo-member-name { font-size: 13px; font-weight: 500; }
+.solo-album-name { font-size: 12px; color: var(--text-muted); }
+.solo-mood { font-size: 11px; color: var(--text-hint); }
+
+/* ── Song grid ── */
+.era-songs { margin-bottom: 40px; animation: fadeUp 0.6s 0.3s ease both; }
+
+.era-loading {
+  font-size: 13px;
+  color: var(--text-hint);
+  padding: 20px 0;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.song-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+}
+.song-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.song-cover {
+  width: 48px; height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.song-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-album {
+  font-size: 11px;
+  color: var(--text-hint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-yt-link {
+  font-size: 10px;
+  color: var(--purple-light);
+  text-decoration: none;
+  margin-top: 2px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.song-yt-link:hover { opacity: 1; }
+
+/* ── Note ── */
+.era-note {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.era-note-icon {
+  color: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 700px) {
+  .era-story { grid-template-columns: 1fr; }
+  .era-title { font-size: 36px; }
+  .tracklist-grid { grid-template-columns: 1fr; }
+}
