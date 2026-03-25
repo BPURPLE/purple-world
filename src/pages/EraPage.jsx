@@ -12,12 +12,12 @@ export default function EraPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (!era) return
-    setLoading(true)
-    getEraSongs(era.spotifyQuery, 8)
-      .then(setSongs)
-      .finally(() => setLoading(false))
-  }, [eraId])
+  if (!era) return
+  setLoading(true)
+  getEraSongs(era.spotifyQuery, 8, era.spotifyAlbumIds)  // ← add era.spotifyAlbumIds
+    .then(setSongs)
+    .finally(() => setLoading(false))
+}, [eraId])
 
   if (!era) return (
     <div style={{ padding: '80px 32px', textAlign: 'center' }}>

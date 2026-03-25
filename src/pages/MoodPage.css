@@ -1,0 +1,370 @@
+/* src/pages/MoodPage.css */
+
+.mood-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+}
+
+/* ── Header ── */
+.mood-header {
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.mood-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--purple-light);
+  margin-bottom: 8px;
+}
+
+.mood-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ── Mode toggle ── */
+.mood-toggle {
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  width: fit-content;
+}
+
+.toggle-btn {
+  font-size: 13px;
+  padding: 8px 20px;
+  border-radius: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.toggle-active {
+  background: rgba(123, 94, 167, 0.25);
+  color: var(--purple-light);
+  border: 1px solid rgba(179, 157, 219, 0.3);
+}
+
+/* ── Mood section ── */
+.mood-section {
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+/* ── Emoji grid ── */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.mood-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.mood-chip:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
+
+.mood-chip-active {
+  border-color: rgba(179, 157, 219, 0.4);
+  background: rgba(123, 94, 167, 0.15);
+}
+
+.mood-emoji {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.mood-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── Custom mood input ── */
+.mood-custom {
+  margin-bottom: 20px;
+}
+
+.mood-custom-label {
+  font-size: 12px;
+  color: var(--text-hint);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.mood-custom-form {
+  display: flex;
+  gap: 12px;
+}
+
+.mood-custom-input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 12px 20px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.mood-custom-input:focus { border-color: var(--border-hover); }
+.mood-custom-input::placeholder { color: var(--text-hint); }
+
+.mood-submit-btn {
+  padding: 12px 24px;
+  border-radius: 40px;
+  background: rgba(123, 94, 167, 0.2);
+  border: 1px solid rgba(179, 157, 219, 0.3);
+  color: var(--purple-light);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.mood-submit-btn:hover:not(:disabled) {
+  background: rgba(123, 94, 167, 0.35);
+  border-color: var(--purple-light);
+}
+.mood-submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── Selected mood prompt ── */
+.mood-selected-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: rgba(123, 94, 167, 0.07);
+  border: 1px solid rgba(179, 157, 219, 0.15);
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mood-selected-prompt p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.mood-selected-prompt strong {
+  color: var(--purple-light);
+  font-weight: 500;
+}
+
+/* ── Energy mode ── */
+.mood-energy-hint {
+  font-size: 13px;
+  color: var(--text-hint);
+  margin-bottom: 20px;
+}
+
+.energy-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.energy-chip {
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 40px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+.energy-chip:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+.energy-chip-active {
+  background: rgba(123, 94, 167, 0.15);
+  border-color: rgba(179, 157, 219, 0.4);
+  color: var(--purple-light);
+}
+
+/* ── Error ── */
+.mood-error {
+  font-size: 13px;
+  color: var(--color-text-danger);
+  padding: 12px 0;
+}
+
+/* ── Results ── */
+.mood-results {
+  margin-top: 40px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.mood-result-header {
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.mood-user-mood {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Result categories ── */
+.result-category {
+  margin-bottom: 32px;
+}
+
+.result-category-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.result-emoji {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.result-category-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.result-category-sub {
+  font-size: 12px;
+  color: var(--text-hint);
+}
+
+.result-songs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 38px;
+}
+
+.result-wildcard {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: rgba(201, 168, 76, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+/* ── Recommendation card ── */
+.rec-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.rec-card:hover {
+  border-color: rgba(255, 68, 68, 0.3);
+  background: var(--surface-2);
+  transform: translateX(4px);
+}
+
+.rec-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.rec-song {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.rec-member {
+  font-size: 11px;
+  color: var(--purple-light);
+  letter-spacing: 0.05em;
+}
+
+.rec-reason {
+  font-size: 12px;
+  color: var(--text-hint);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.rec-arrow {
+  font-size: 16px;
+  color: var(--text-hint);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.rec-card:hover .rec-arrow {
+  color: #FF4444;
+  transform: translateX(4px);
+}
+
+/* ── Reset button ── */
+.mood-reset-btn {
+  margin-top: 32px;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+.mood-reset-btn:hover {
+  border-color: var(--purple-light);
+  color: var(--purple-light);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .mood-title { font-size: 36px; }
+  .mood-grid { grid-template-columns: repeat(3, 1fr); }
+  .mood-custom-form { flex-direction: column; }
+  .mood-selected-prompt { flex-direction: column; }
+  .result-songs { padding-left: 0; }
+}

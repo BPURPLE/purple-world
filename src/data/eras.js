@@ -1,8 +1,5 @@
 // src/data/eras.js
-// ─────────────────────────────────────────────
 // Single source of truth for the entire app.
-// Every page reads from here — nothing hardcoded elsewhere.
-// ─────────────────────────────────────────────
 
 export const members = {
   RM: {
@@ -15,6 +12,7 @@ export const members = {
     soloYear: 2022,
     soloMood: "artistic, introspective, Seoul",
     spotifyArtist: "RM",
+    soloSpotifyAlbumId: "6pCMvQFBfFxHJARCPdPnWN",
   },
   Jin: {
     id: "Jin",
@@ -25,7 +23,8 @@ export const members = {
     soloAlbum: "The Astronaut",
     soloYear: 2022,
     soloMood: "emotional, farewell, stars",
-    spotifyArtist: "Jin BTS",
+    spotifyArtist: "Jin",
+    soloSpotifyAlbumId: null,
   },
   Suga: {
     id: "Suga",
@@ -33,10 +32,11 @@ export const members = {
     role: "Lead Rapper · Producer",
     color: "#80CBC4",
     bg: "rgba(128,203,196,0.15)",
-    soloAlbum: "D-Day (Agust D)",
+    soloAlbum: "D-Day",
     soloYear: 2023,
     soloMood: "cathartic, rap, healing",
     spotifyArtist: "Agust D",
+    soloSpotifyAlbumId: null,
   },
   JHope: {
     id: "JHope",
@@ -48,6 +48,7 @@ export const members = {
     soloYear: 2022,
     soloMood: "dark, festival, experimental",
     spotifyArtist: "j-hope",
+    soloSpotifyAlbumId: null,
   },
   Jimin: {
     id: "Jimin",
@@ -59,6 +60,7 @@ export const members = {
     soloYear: 2023,
     soloMood: "identity, pop perfection, raw",
     spotifyArtist: "Jimin",
+    soloSpotifyAlbumId: null,
   },
   V: {
     id: "V",
@@ -69,7 +71,8 @@ export const members = {
     soloAlbum: "Layover",
     soloYear: 2023,
     soloMood: "jazz, vintage, cinematic",
-    spotifyArtist: "V BTS",
+    spotifyArtist: "V",
+    soloSpotifyAlbumId: null,
   },
   Jungkook: {
     id: "Jungkook",
@@ -81,6 +84,7 @@ export const members = {
     soloYear: 2023,
     soloMood: "pop, global, euphoric",
     spotifyArtist: "Jungkook",
+    soloSpotifyAlbumId: null,
   },
 }
 
@@ -111,7 +115,12 @@ export const eras = [
     startWithReason:
       "The song that started everything. Aggressive, young, and asking one question: what's your dream?",
     albums: ["2 Cool 4 Skool", "O!RUL8,2?", "Skool Luv Affair"],
-    spotifyQuery: "BTS school trilogy no more dream",
+    spotifyAlbumIds: [
+      "6egaEe9JaULuUCkihSnYlH",
+      "6rWmdSJIaGTVtdMJQ35Lvf",
+      "5r35iS0uSSoQBKzQj0IeI3",
+    ],
+    spotifyQuery: "No More Dream BTS",
     isUpcoming: false,
   },
 
@@ -136,7 +145,12 @@ export const eras = [
     startWithReason:
       "Haunting and beautiful. The MV shocked everyone — BTS had never been this emotionally raw before.",
     albums: ["HYYH Pt.1", "HYYH Pt.2", "Young Forever"],
-    spotifyQuery: "BTS I need u spring day hyyh",
+    spotifyAlbumIds: [
+      "0mEeCuKJQ8Xh9tQ5dMm89X",
+      "2ds8iT4wkaN1Q1gZe1qcOD",
+      "1k5bJ8l5oL5xxVBVHjil09",
+    ],
+    spotifyQuery: "Spring Day BTS",
     isUpcoming: false,
   },
 
@@ -154,14 +168,18 @@ export const eras = [
     },
     mood: ["dark", "temptation", "artistic", "literary", "growth"],
     theme:
-      "Inspired by Hermann Hesse's novel 'Demian' — each member confronts their own darkness and inner demons. The most artistic and literary era. BTS proved they were not just a pop group.",
+      "Inspired by Hermann Hesse's novel Demian — each member confronts their own darkness and inner demons. The most artistic and literary era. BTS proved they were not just a pop group.",
     aesthetic:
       "Dark academia. Feathered wings. Cracked mirrors. Symbolism layered on symbolism.",
     startWith: "Blood Sweat & Tears",
     startWithReason:
       "Seductive, cinematic, and packed with art history references. Nothing prepares you for this MV.",
     albums: ["Wings", "You Never Walk Alone"],
-    spotifyQuery: "BTS blood sweat tears wings",
+    spotifyAlbumIds: [
+      "1vhNGBTFoaSTLbHjPGFIlF",
+      "6THpewjqJ15ORBJkh5CEYb",
+    ],
+    spotifyQuery: "Blood Sweat Tears BTS",
     isUpcoming: false,
   },
 
@@ -186,7 +204,12 @@ export const eras = [
     startWithReason:
       "Many fans call this the greatest BTS song ever made. About longing, loss, and waiting for warmth to return.",
     albums: ["Love Yourself: Her", "Love Yourself: Tear", "Love Yourself: Answer"],
-    spotifyQuery: "BTS spring day love yourself",
+    spotifyAlbumIds: [
+      "07Rq17GzCnIdWJcyVHb57G",
+      "4NIqCxqP9o8Tp6tGLBqd8O",
+      "43wFM1HquliY3iwKWzPN4y",
+    ],
+    spotifyQuery: "DNA BTS",
     isUpcoming: false,
   },
 
@@ -211,7 +234,11 @@ export const eras = [
     startWithReason:
       "Bright, joyful, dedicated to ARMY. The perfect gateway before going deeper into the shadows of this era.",
     albums: ["Map of the Soul: Persona", "Map of the Soul: 7"],
-    spotifyQuery: "BTS boy with luv map of the soul",
+    spotifyAlbumIds: [
+      "2KqlAl1Kl5fZvbFgJ0qFB6",
+      "5W1XY5ucNATjTULERvXx9j",
+    ],
+    spotifyQuery: "Boy With Luv BTS",
     isUpcoming: false,
   },
 
@@ -236,7 +263,10 @@ export const eras = [
     startWithReason:
       "Written for the pandemic generation. The gentlest reminder that life continues, even when everything stops.",
     albums: ["BE"],
-    spotifyQuery: "BTS life goes on dynamite BE",
+    spotifyAlbumIds: [
+      "6nYfHQnvkvOTNHnOhDT3sr",
+    ],
+    spotifyQuery: "Life Goes On BTS",
     isUpcoming: false,
   },
 
@@ -263,7 +293,10 @@ export const eras = [
     startWithReason:
       "The thesis of Chapter 2 — the best moment is yet to come. A promise, not a goodbye.",
     albums: ["Proof"],
-    spotifyQuery: "BTS yet to come proof",
+    spotifyAlbumIds: [
+      "6al2VdKbb6FIz9d7lU7WRB",
+    ],
+    spotifyQuery: "Yet To Come BTS",
     chapterNote:
       "This album opened Chapter 2 — members preparing for mandatory military service while promising ARMY they would return.",
     isUpcoming: false,
@@ -290,7 +323,8 @@ export const eras = [
     startWithReason:
       "Jungkook's most-streamed solo ever. Infectious, emotional, and the perfect entry point into the solo era.",
     albums: membersArray.map(m => `${m.soloAlbum} — ${m.id}`),
-    spotifyQuery: "BTS solo 2022 2023 golden face layover",
+    spotifyAlbumIds: [],
+    spotifyQuery: "Golden Jungkook BTS",
     chapterNote:
       "Members began enlisting for military service during this era. Jin enlisted first in December 2022.",
     soloMembers: membersArray,
@@ -309,26 +343,27 @@ export const eras = [
       dark: "#080d0f",
       card: "rgba(84,110,122,0.07)",
     },
-    mood: ["patience", "growth", "trust", "anticipation", "individual journeys"],
+    mood: ["patience", "growth", "trust", "anticipation", "reunion"],
     theme:
-      "All seven members fulfilled South Korea's mandatory military service. Not an ending. A pause. Each member grew quietly, and ARMY waited — together, across the world.",
+      "All seven members fulfilled South Korea's mandatory military service. Not an ending. A pause. Each member grew quietly, and ARMY waited — together, across the world. They all came back.",
     aesthetic:
-      "Quiet. Steady. The calm before a reunion that would shake the world.",
+      "Quiet. Steady. The calm before a reunion that shook the world.",
     startWith: "The Astronaut",
     startWithReason:
       "Jin's farewell before enlisting first. He wrote it knowing he would be gone — but promising to return.",
     albums: [],
-    spotifyQuery: "Jin The Astronaut BTS",
+    spotifyAlbumIds: [],
+    spotifyQuery: "Astronaut Jin BTS",
     chapterNote:
-      "Jin and j-hope have completed service. All members expected fully discharged by mid-2025.",
+      "All seven members have completed their mandatory military service and returned. The reunion is here.",
     enlistmentTimeline: [
       { member: "Jin",      enlisted: "Dec 2022", discharge: "Jun 2024", status: "returned" },
-      { member: "j-hope",   enlisted: "Apr 2023", discharge: "Oct 2024", status: "returned" },
-      { member: "Suga",     enlisted: "Sep 2023", discharge: "Jun 2025", status: "serving"  },
-      { member: "RM",       enlisted: "Dec 2023", discharge: "Jun 2025", status: "serving"  },
-      { member: "V",        enlisted: "Dec 2023", discharge: "Jun 2025", status: "serving"  },
-      { member: "Jimin",    enlisted: "Dec 2023", discharge: "Jun 2025", status: "serving"  },
-      { member: "Jungkook", enlisted: "Dec 2023", discharge: "Jun 2025", status: "serving"  },
+      { member: "JHope",    enlisted: "Apr 2023", discharge: "Oct 2024", status: "returned" },
+      { member: "Suga",     enlisted: "Sep 2023", discharge: "Feb 2025", status: "returned" },
+      { member: "RM",       enlisted: "Dec 2023", discharge: "Jun 2025", status: "returned" },
+      { member: "V",        enlisted: "Dec 2023", discharge: "Jun 2025", status: "returned" },
+      { member: "Jimin",    enlisted: "Dec 2023", discharge: "Jun 2025", status: "returned" },
+      { member: "Jungkook", enlisted: "Dec 2023", discharge: "Jun 2025", status: "returned" },
     ],
     isUpcoming: false,
   },
@@ -354,6 +389,7 @@ export const eras = [
     startWithReason:
       "The title track — co-produced with Diplo and Flume. The first official sound of the reunion era.",
     albums: ["Arirang"],
+    spotifyAlbumIds: [],
     tracklist: [
       "Body to Body",
       "Hooligan",
@@ -376,16 +412,14 @@ export const eras = [
     concertStream: "Netflix — March 21, Gwanghwamun Square, Seoul",
     documentary: "BTS: The Return — Netflix, March 27",
     worldTour: "Arirang World Tour — April 2026 to March 2027",
-    spotifyQuery: "BTS Arirang SWIM 2025",
+    spotifyQuery: "SWIM BTS",
     chapterNote:
       "Every track co-written by a BTS member. Suga described it as a more mature side of BTS you have never heard before.",
     isUpcoming: true,
   },
 ]
 
-// ─────────────────────────────────────────────
-// HELPERS — import and use anywhere in the app
-// ─────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────
 
 export const getEra         = (id) => eras.find(e => e.id === id)
 export const chapter1Eras   = eras.filter(e => e.chapter === 1)
@@ -394,6 +428,5 @@ export const arirangEra     = eras.find(e => e.id === "arirang")
 export const getMemberColor = (name) => members[name]?.color ?? "#B39DDB"
 export const allMoods       = [...new Set(eras.flatMap(e => e.mood))].sort()
 
-// Arirang release — March 20 2025 midnight KST
-export const ARIRANG_RELEASE  = new Date("2025-03-20T00:00:00+09:00")
-export const isArirangOut     = () => new Date() >= ARIRANG_RELEASE
+export const ARIRANG_RELEASE = new Date("2025-03-20T00:00:00+09:00")
+export const isArirangOut    = () => new Date() >= ARIRANG_RELEASE
